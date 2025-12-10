@@ -1,11 +1,45 @@
-<div align="center">
+# SHOP CONNECT - Retail Management System
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A full-stack ready retail management dashboard featuring POS, Inventory, Finance, and AI Analytics.
 
-  <h1>Built with AI Studio</h2>
+## Deployment on Vercel
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+This application is optimized for deployment on Vercel as a Vite React application.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 1. Prerequisite
+Ensure you have the code pushed to a Git repository (GitHub, GitLab, or Bitbucket).
 
-</div>
+### 2. Import Project
+1. Go to your [Vercel Dashboard](https://vercel.com/dashboard).
+2. Click **Add New** > **Project**.
+3. Import your repository.
+
+### 3. Configure Project
+Vercel should automatically detect the framework as **Vite**.
+*   **Build Command:** `npm run build`
+*   **Output Directory:** `dist`
+*   **Install Command:** `npm install`
+
+### 4. Environment Variables
+**Crucial Step:** Before clicking Deploy (or in Settings after deployment), add your API key:
+1.  Expand the **Environment Variables** section.
+2.  Key: `API_KEY`
+3.  Value: `your_google_gemini_api_key`
+4.  Click **Add**.
+
+### 5. Deploy
+Click **Deploy**. Vercel will build the application and provide you with a live URL.
+
+## Database (Optional Backend)
+
+A SQL schema is provided in `database-sql.md`.
+To fully enable backend features (persisting data):
+1.  Provision a PostgreSQL database (e.g., via Vercel Storage or Supabase).
+2.  Run the scripts in `database-sql.md` to create the tables.
+3.  You would need to implement a backend API (Node.js/Next.js) to connect this frontend to the database. Currently, the app runs in **Demo Mode** with local state.
+
+## Local Development
+
+1.  `npm install`
+2.  Create a `.env` file and add `API_KEY=your_key_here`.
+3.  `npm run dev`
